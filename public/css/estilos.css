@@ -2,11 +2,3 @@ main{
    position: relative;
    top: 66px;
 }
-
-.buscador{
-    margin-top: 20px;
-    border-radius: 10%;
-}
-.buscador nav{
-    background-color: #00ACEE;
-}

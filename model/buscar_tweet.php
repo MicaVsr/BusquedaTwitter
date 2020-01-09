@@ -1,19 +1,25 @@
 <?php
 
 function buscar_tweet(){
-    if(!empty($_GET['palabra'])){
-        $palabra= $_GET['palabra'];
-    }else{
-        header('Location:../buscador.php');
-        exit();
-    }
     $query='?q=';
     $lenguaje='&lang=es';
     $cantidad='&count=10';
 
+    if(!empty($_GET['palabra'])){
+        $palabra= $_GET['palabra'];
+        $palabra_espacios= str_replace(" ", "%20", $palabra); //reemplaza el espacio por %20 para evitar fallas
+        $palabra=$palabra_espacios;
+        define('QUERY', $query.$palabra.$cantidad.$lenguaje);
+    }elseif(!empty($_SERVER['QUERY_STRING'])){
+        $query="?".$_SERVER['QUERY_STRING'];
+        define('QUERY', $query);
+    }else{
+        header('Location:../buscador.php');
+        exit();
+    }
+
     include ('../config/claves_twitter.php');
     define('API_URL', 'https://api.twitter.com/1.1/search/tweets.json');
-    define('QUERY', $query.$palabra.$cantidad.$lenguaje);
 
     $autorizacion= "authorization: Bearer AAAAAAAAAAAAAAAAAAAAAPg3BwEAAAAAs2Fql7aYxoeSrHmOdCC%2FnuL2%2BN4%3DHKSQDPOyN4uSq9yX0f3Rqn9ppzsrQuX2TwLXIKYKyNt2zfAlNy";
 
@@ -32,9 +38,9 @@ function buscar_tweet(){
     if(!empty($datos_tweets['statuses'])){
         return $datos_tweets;
     }else{
-        return false;
+        echo "No se encontraron Tweets";
+        exit();
     }
-
 
 
     /*curl --request GET \

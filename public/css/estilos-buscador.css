@@ -1,0 +1,62 @@
+.buscador{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    background-color: #00ACEE;
+    border-radius: .25rem;
+}
+.buscador input{
+    margin-right: 0;
+}
+
+#resultado_busqueda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flecha_buscador{
+    width: 100px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.spinner-border{
+    margin: auto;
+}
+.titulo_busqueda{
+    text-align: center;
+}
+
+/*------------Tweets-----------*/
+.tweet{
+    width:100%;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: row;
+}
+.card-img{
+    width: 48px;
+    height: 48px;
+}
+
+.tweet .datos-usuario{
+    display: flex;
+    flex-direction: row;
+}
+.card-title{
+    margin-left: 10px;
+}
+.tweet .nombre{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
