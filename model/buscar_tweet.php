@@ -3,7 +3,7 @@
 function buscar_tweet(){
     $query='?q=';
     $lenguaje='&lang=es';
-    $cantidad='&count=10';
+    $cantidad='&count=20';
 
     if(!empty($_GET['palabra'])){
         $palabra= $_GET['palabra'];

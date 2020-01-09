@@ -1,10 +1,17 @@
 <?php
     $historial=consultar_historial();
 
-    for ($i=0; $i<sizeof($historial);$i++){
+    if (!empty($historial)){
+        foreach ($historial as $palabra){
+            echo "<tr>
+                    <td>".$palabra['palabra']."</td>
+                    <td>".$palabra['fecha']."</td>
+              </tr>";
+        }
+    }else{
         echo "<tr>
-                    <td>".$historial[$i]."</td>
+                    <td>Aún no hay búsquedas</td> 
+                    <td></td>                  
               </tr>";
     }
-
 ?>

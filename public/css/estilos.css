@@ -1,4 +1,31 @@
+/*----------HEADER----------*/
+header .navbar{
+    background-color: #35abf0;
+}
+header .navbar-brand img{
+    width: 40px;
+}
+header .navbar-dark .navbar-toggler{
+    color: rgba(0,0,0,.0);
+    border-color: rgba(0,0,0,.0);
+}
+header .navbar-dark .navbar-nav .nav-link{
+    color: rgb(255,255,255);
+}
+header .navbar-dark .navbar-nav .nav-link:hover{
+    color: rgba(255,255,255,.7);
+}
+
+@media only screen and (min-width: 48em){
+    header .navbar-nav{
+        position: absolute;
+        right: 15px;
+    }
+}
+/*----------MAIN----------*/
 main{
-   position: relative;
-   top: 66px;
+    position: relative;
+    top: 66px;
+    margin-bottom: 120px;
+
 }

@@ -3,18 +3,19 @@ include ("../config/conexion.php");
 
 function consultar_historial(){
     $conn=getConexion();
-    $query="SELECT palabra FROM historial";
+    $query="SELECT palabra, fecha FROM historial";
     $result= mysqli_query($conn, $query);
 
     $historial = Array();
-    $i=0;
+
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
-            $historial[$i]=$row['palabra'];
-            $i++;
+            $palabra=Array();
+            $palabra['palabra']=$row['palabra'];
+            $palabra['fecha']=$row['fecha'];
+            $historial[]=$palabra;
         }
     }
-
     mysqli_close($conn);
     return $historial;
 }

@@ -3,7 +3,6 @@ CREATE DATABASE db_buscador_twitter;
 USE db_buscador_twitter;
 
 CREATE TABLE historial (id_palabra INT PRIMARY KEY AUTO_INCREMENT,
-						palabra VARCHAR(50));
-/*                        
-SELECT * FROM historial;
-*/
+						palabra VARCHAR(50) NOT NULL, fecha DATE NOT NULL);
+
+/*SELECT * FROM historial;*/

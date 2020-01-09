@@ -4,6 +4,7 @@
     <title>Buscar Tweets</title>
     <?php include("public/head.html") ?>
     <link rel="stylesheet" href="public/css/estilos-buscador.css">
+    <script src="public/js/funciones.js"></script>
 </head>
 <body>
     <?php include("public/header.html") ?>
@@ -17,7 +18,8 @@
             <p class="titulo_busqueda">Ingrese una palabra para buscar tweets</p>
             <!-- RESULTADO -->
         </section>
-        <script src="public/js/funciones.js"></script>
+
     </main>
+    <footer></footer>
 </body>
 </html>

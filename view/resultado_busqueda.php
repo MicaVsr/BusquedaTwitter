@@ -37,13 +37,6 @@
         echo"
             </div>";
     }
-
-    echo "<a href='javascript:history.back(-1)'>Atras</a>";
-    /*echo "<input id='query' type='text' style='display: none' value='".$pagina_siguiente."' disabled>
-            
-            <a class='btn btn-success' id='siguiente'>Siguiente</a>";*/
-
-
-    /*value='".$pagina_siguiente."'  controller/buscar.php".$pagina_siguiente."*/
+        echo "<a class='btn btn-light' href='#'>⇡</a>";
 
 ?>
