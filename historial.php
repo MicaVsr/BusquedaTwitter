@@ -11,6 +11,12 @@
     <section class="historial_busquedas">
         <h3>Historial de búsquedas</h3>
         <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Reciente</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
             <tbody id="historial">
                 <!-- RESULTADO -->
             </tbody>

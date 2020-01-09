@@ -24,6 +24,8 @@ header .navbar-dark .navbar-nav .nav-link:hover{
 }
 /*----------MAIN----------*/
 main{
-   position: relative;
-   top: 66px;
+    position: relative;
+    top: 66px;
+    margin-bottom: 120px;
+
 }

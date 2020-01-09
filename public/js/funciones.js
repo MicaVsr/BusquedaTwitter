@@ -1,24 +1,6 @@
 $(document).ready(function(){
-    /*$("#siguiente").click(function(){
-        var query=$("#query").val();
-        alert(query);
-        $.ajax({
-            data:  {query:query},
-            url:   'controller/buscar.php',
-            type:  'GET',
-            beforeSend: function (){
-                $("#resultado_busqueda").html('<div class="spinner-border text-secondary"></div>');
-            },
-            success: function (response){
-                alert(query);
-                $("#resultado_busqueda").html(response);
-            },
-            error:function(){
-                $("#resultado_busqueda").html('<p>Hubo un error en la búsqueda, inténtelo nuevamente</p>');
-            }
-        });
-    });*/
 
+    //Busca en tweeter
     $("#buscar").click(function(){
         var palabra=$("#palabra").val();
 
@@ -42,6 +24,7 @@ $(document).ready(function(){
         }
     });
 
+    //Guarda en el historial
     $("#buscar").click(function(){
         var palabra=$("#palabra").val();
 
