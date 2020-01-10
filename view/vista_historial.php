@@ -6,6 +6,7 @@
             echo "<tr>
                     <td>".$palabra['palabra']."</td>
                     <td>".$palabra['fecha']."</td>
+                    <td>".$palabra['hora']."</td>
               </tr>";
         }
     }else{

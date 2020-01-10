@@ -20,7 +20,21 @@ function guardar_en_historial(){
         $dia='0'.$dia;
     }
 
+    $hora=$fecha['hours'];
+    if ($hora<10){
+        $hora='0'.$hora;
+    }
+    $minutos=$fecha['minutes'];
+    if ($minutos<10){
+        $minutos='0'.$minutos;
+    }
+    $segundos=$fecha['seconds'];
+    if ($segundos<10){
+        $segundos='0'.$segundos;
+    }
+
     $fecha_actual=$fecha['year'].$mes.$dia;
+    $hora_actual=$hora.":".$minutos.":".$segundos;
 
     if(!empty($_POST['palabra'])){
         $palabra=$_POST['palabra'];
@@ -30,7 +44,7 @@ function guardar_en_historial(){
 
         $count = mysqli_num_rows($resultSiYaExiste);
         if ($count!=1) {
-            $query="INSERT INTO historial(palabra, fecha) values ('$palabra', '$fecha_actual');";
+            $query="INSERT INTO historial(palabra, fecha, hora) values ('$palabra', '$fecha_actual', '$hora_actual');";
             $result = mysqli_query($conn, $query);
         }
         mysqli_close($conn);

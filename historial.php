@@ -15,6 +15,7 @@
                 <tr>
                     <th>Reciente</th>
                     <th>Fecha</th>
+                    <th>Hora</th>
                 </tr>
             </thead>
             <tbody id="historial">

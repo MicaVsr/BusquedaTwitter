@@ -3,7 +3,7 @@ include ("../config/conexion.php");
 
 function consultar_historial(){
     $conn=getConexion();
-    $query="SELECT palabra, fecha FROM historial";
+    $query="SELECT palabra, fecha, hora FROM historial";
     $result= mysqli_query($conn, $query);
 
     $historial = Array();
@@ -13,6 +13,7 @@ function consultar_historial(){
             $palabra=Array();
             $palabra['palabra']=$row['palabra'];
             $palabra['fecha']=$row['fecha'];
+            $palabra['hora']=$row['hora'];
             $historial[]=$palabra;
         }
     }
